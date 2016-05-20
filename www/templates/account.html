@@ -1,0 +1,21 @@
+<ion-view view-title="Change Account">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Old Password</span>
+        <input type="password" placeholder="Old Password" ng-model="password.oldpassword">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">New Password</span>
+        <input type="password" placeholder="New Password" ng-model="password.newpassword">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Confirm New Password</span>
+        <input type="password" placeholder="Confirm New Password" ng-model="password.confirmnewpassword">
+      </label>
+      <button class="button button-full button-positive" ng-click="changePassword()">
+      Change Password
+    </button> 
+    </div>
+  </ion-content>
+</ion-view>

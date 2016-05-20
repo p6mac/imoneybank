@@ -1,0 +1,11 @@
+
+<ion-view view-title="Transaction History">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="item in transactionCtrl.transaction_history | orderBy:'-'">
+        <h3>{{item.transaction_date}} </h3>
+          <p>The amount of  {{item.transaction_amount | currency : '₱ '}} has been {{item.transaction}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
