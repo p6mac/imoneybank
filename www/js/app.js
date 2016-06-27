@@ -27,6 +27,7 @@ angular.module('starter', ['ionic','firebase', 'starter.controllers', 'starter.c
 
   .state('app', {
     url: '/app',
+    cache : false,
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AuthController',
@@ -35,6 +36,7 @@ angular.module('starter', ['ionic','firebase', 'starter.controllers', 'starter.c
 
   .state('app.deposit', {
     url: '/deposit',
+    cache : false,
     views: {
       'menuContent': {
         templateUrl : 'templates/deposit.html',
@@ -45,6 +47,7 @@ angular.module('starter', ['ionic','firebase', 'starter.controllers', 'starter.c
   })
 
   .state('app.withdraw', {
+      cache : false,
       url: '/withdraw',
       views: {
         'menuContent': {
@@ -56,6 +59,7 @@ angular.module('starter', ['ionic','firebase', 'starter.controllers', 'starter.c
     })
     .state('app.balances', {
       url: '/balance',
+      cache : false,
       views: {
         'menuContent': {
           templateUrl: 'templates/checkbalance.html',
@@ -68,6 +72,7 @@ angular.module('starter', ['ionic','firebase', 'starter.controllers', 'starter.c
 
   .state('app.history', {
     url: '/history',
+    cache : false,
     views: {
       'menuContent': {
         templateUrl: 'templates/transactionhistory.html',
@@ -78,6 +83,7 @@ angular.module('starter', ['ionic','firebase', 'starter.controllers', 'starter.c
   })
   .state('app.account', {
     url: '/account',
+    cache : false,
     views: {
       'menuContent': {
         templateUrl: 'templates/account.html',
@@ -88,12 +94,14 @@ angular.module('starter', ['ionic','firebase', 'starter.controllers', 'starter.c
   })
   .state('login', {
     url : '/',
+    cache : false,
     templateUrl: 'templates/login.html',
     controller : 'AuthController',
     controllerAs : 'authCtrl'
   })
   .state('register', {
     url : '/register',
+    cache : false,
     templateUrl: 'templates/register.html',
     controller : 'AuthController',
     controllerAs : 'authCtrl'

@@ -4,8 +4,6 @@ angular.module('starter.controllers', [])
       .controller('TransactionController', TransactionController)
       .controller('AccountController', AccountController)
 
-  AuthController.$inject = ['$scope', '$state', 'UtilityService', 'AuthService']
-
   function AuthController($scope, $state, UtilityService, AuthService) {
       var auth = new Firebase('https://imoneybanko.firebaseio.com/');
       var vm = this;
@@ -85,7 +83,6 @@ angular.module('starter.controllers', [])
   }
 
   // Transaction Controller
-  TransactionController.$inject = ['$scope', '$state', '$timeout', '$firebaseArray', 'TransactionService', 'UtilityService']
   function TransactionController ($scope, $state, $timeout, $firebaseArray, TransactionService, UtilityService) {
       var url = 'https://imoneybanko.firebaseio.com/';
       var ref = new Firebase(url);
@@ -161,8 +158,6 @@ angular.module('starter.controllers', [])
 
 
   //Account Controller
-  AccountController.$inject = ['$scope', '$state', '$timeout', 'UtilityService'];
-
   function AccountController ($scope, $state,$timeout, UtilityService) {
      var ref =  new Firebase('https://imoneybanko.firebaseio.com');
      var userRef;
